@@ -71,8 +71,8 @@ namespace RecruitAllButton
                         recruitedAnyTroop = true;
                         GiveGoldAction.ApplyBetweenCharacters(Hero.MainHero, null, cost, true);
                         notable.VolunteerTypes[i] = null;
-                        MobileParty.MainParty.MemberRoster.AddToCounts(Hero.MainHero.CharacterObject, 1, false, 0, 0, true, -1);
-                        CampaignEventDispatcher.Instance.OnUnitRecruited(Hero.MainHero.CharacterObject, 1);
+                        MobileParty.MainParty.MemberRoster.AddToCounts(troop, 1, false, 0, 0, true, -1);
+                        CampaignEventDispatcher.Instance.OnUnitRecruited(troop, 1);
 
                         InformationManager.DisplayMessage(new InformationMessage($"You recruited one {troop.Name}."));
                     }
